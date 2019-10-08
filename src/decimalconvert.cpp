@@ -32,6 +32,8 @@ int main()
     int n = 12345, base = 8;
     stack<char> output1,output2;
 
+    std::cout<<std::oct<<n<<"\n";
+
     recursionConvert(output1, n, base);
     iterConvert(output2, n, base);
 

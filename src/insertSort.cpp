@@ -38,4 +38,6 @@ int main()
     {
         std::cout<<tmp2[i].y <<" ";
     } std::cout << "\n";
+
+    delete[] head;
 }
