@@ -1,4 +1,4 @@
-# LetsLeetcode
+# LetsPractice
 Improve a little bit everyday
 
 ---
