@@ -14,6 +14,7 @@ void BubbleSort(Object objs[],int size)
             }
             
         }
+        PrintObjX(objs,size);
         --end;
     }
 }
