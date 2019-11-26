@@ -1,5 +1,5 @@
 #include <iostream>
-#include "common.h"
+#include "../common.h"
 
 void insertSort(Object* pObj, int N)
 {

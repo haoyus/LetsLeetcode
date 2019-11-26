@@ -1,4 +1,4 @@
-#include "common.h"
+#include "../common.h"
 
 void SelectSort(Object objs[], int size)
 {
@@ -17,6 +17,8 @@ void SelectSort(Object objs[], int size)
         Object tmp = objs[i];
         objs[i] = objs[minInd];//minObj;
         objs[minInd] = tmp;
+
+        PrintObjX(objs,size);
     }
 }
 

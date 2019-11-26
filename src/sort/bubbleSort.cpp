@@ -1,5 +1,5 @@
 #include <iostream>
-#include "common.h"
+#include "../common.h"
 
 // void BubbleSort(Object (&objs)[SIZE])
 void BubbleSort(Object objs[],int size)
