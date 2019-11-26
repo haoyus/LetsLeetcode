@@ -4,16 +4,21 @@
 // void BubbleSort(Object (&objs)[SIZE])
 void BubbleSort(Object objs[],int size)
 {
+    if(size<=1) return;
+    
     int end = size-1;
     while(end>0){
+        bool flag = false;
+
         for(int i=0; i<end; ++i){
             if(objs[i].x > objs[i+1].x){
                 Object tmp = objs[i+1];
                 objs[i+1] = objs[i];
                 objs[i] = tmp;
+                flag = true;
             }
-            
         }
+        if(!flag) break;
         PrintObjX(objs,size);
         --end;
     }

@@ -3,6 +3,8 @@
 
 void insertSort(Object* pObj, int N)
 {
+    if(N<=1) return;
+    
     for(int j=1;j<N;++j){
         Object key = pObj[j];
 
