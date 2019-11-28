@@ -9,7 +9,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/sort/mergeSort",
+            "program": "${workspaceFolder}/src/binaryTree/testBinTree",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/src/sort",
