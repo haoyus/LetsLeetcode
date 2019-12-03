@@ -45,7 +45,8 @@ void UdpReceiver::initial(const int receiverPort)
     if(socketFd==-1)
         cout<<"\033[31mfailed to create receiver socket\033[0m"<<endl;
     else
-        cout<<"\033[32mcreated udp receiver socket \033[0m"<<socketFd<<endl;
+        cout<<"\033[32mcreated udp receiver socket \033[0m"<<socketFd
+            << "\033[32m for port \033[0m" << receiverPort <<endl;
 
     int ret=bind(socketFd,(sockaddr*)&receiverAddress,sizeof(receiverAddress));
     if(ret==-1)
