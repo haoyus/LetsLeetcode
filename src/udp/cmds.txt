@@ -1,1 +1,0 @@
-g++ UdpTester.cpp ./EthernetData.cpp ./ByteData.cpp ../runtime/timer.cpp -o UdpTester -lpthread
