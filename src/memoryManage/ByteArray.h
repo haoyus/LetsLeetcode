@@ -9,8 +9,8 @@ class ByteArray
 public:
     ByteArray();
     ByteArray(size_t len);
-    //ByteArray(const ByteArray&) = delete;
-    //ByteArray& operator=(const ByteArray&) = delete;
+    ByteArray(const ByteArray&) = delete;
+    ByteArray& operator=(const ByteArray&) = delete;
     ~ByteArray();
 
     void Resize(size_t len);

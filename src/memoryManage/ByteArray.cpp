@@ -2,6 +2,7 @@
 
 using std::cout;
 using std::endl;
+using std::make_shared;
 
 ByteArray::ByteArray()
     : head(nullptr)
@@ -40,11 +41,12 @@ ByteArrayPtr MakeByteArray(size_t size)
 
 int main()
 {
-    ByteArrayPtr Ptr(new ByteArray(5));//Ptr(make_shared<ByteArray>(5), = ..., Ptr, Ptr(5))
+    ByteArrayPtr Ptr(make_shared<ByteArray>());//Ptr(make_shared<ByteArray>(5), = ..., Ptr, Ptr(5)), (new ByteArray(5))
     {
-        ByteArrayPtr tmp(new ByteArray(10));//tmp(make_shared), = make_shared, = MakeByteArray(10)
+        ByteArrayPtr tmp = MakeByteArray(10);//tmp(make_shared), = make_shared<ByteArray>(10), = MakeByteArray(10)
         Ptr = tmp;
         cout << "After assign\n";
     }
+    Ptr->getHead();
     cout<< "Out of block\n";
 }
