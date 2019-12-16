@@ -6,7 +6,7 @@ void BubbleSort(Object objs[],int size)
 {
     if(size<=1) return;
     
-    int end = size-1;
+    int end = size-1;//end of unsorted area
     while(end>0){
         bool flag = false;
 
@@ -24,6 +24,26 @@ void BubbleSort(Object objs[],int size)
     }
 }
 
+void BubbleSortReverse(Object objs[], int size)
+{
+    if(size <=1) return;
+
+    int end = 0;//end of sorted area
+
+    while(end < size-1){
+        for(int i=size-1;i>end;--i){
+            if(objs[i].x < objs[i-1].x){
+                Object tmp = objs[i-1];
+                objs[i-1] = objs[i];
+                objs[i] = tmp;
+            }
+        }
+        ++end;
+        PrintObjX(objs,size);
+    }
+
+}
+
 
 int main()
 {
@@ -35,5 +55,5 @@ int main()
     PrintObjX(objects,SIZE);
 
     BubbleSort(objects,SIZE);
-    PrintObjX(objects,SIZE);
+    //PrintObjX(objects,SIZE);
 }
