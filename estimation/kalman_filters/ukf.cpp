@@ -216,3 +216,12 @@ void UKF::Update(const Eigen::VectorXd& z, Eigen::VectorXd& x, Eigen::MatrixXd& 
   //std::cout << "Updated state covariance P: " << std::endl << P << std::endl;
 
 }
+
+double UKF::GetNIS(const Eigen::VectorXd& z) const
+{
+  VectorXd innov = z - z_pred_;
+
+  double nis = innov.transpose()*S_.inverse()*innov;
+
+  return nis;
+}

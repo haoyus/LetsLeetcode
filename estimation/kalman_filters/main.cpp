@@ -41,9 +41,12 @@ int main() {
 { SimpleTimer t;
     ukf.Predict(x,P,0.1);
     ukf.Update(z,x,P);
+    //ukf.GetNIS(z);
 }
     }
 
-    std::cout << "final x:\n" << x;
+    std::cout << "final x:\n" << x << std::endl;
+
+    std::cout << "NIS: " << ukf.GetNIS(z) << std::endl;
     return 0;
 }

@@ -35,6 +35,8 @@ public:
 
     void Update(const Eigen::VectorXd& z, Eigen::VectorXd& x, Eigen::MatrixXd& P);
 
+    double GetNIS(const Eigen::VectorXd& z) const;
+
 private:
     int n_x_;
     int n_z_;
