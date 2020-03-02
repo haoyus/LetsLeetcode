@@ -3,11 +3,15 @@
 
 int Partition(Object obj[], int lo, int hi)
 {
-    int piv = hi;
+    int piv = (lo+hi)/2;
 
     int i=lo;
-    for(int j=lo; j<hi; ++j){
-        if(obj[j].x < obj[hi].x){
+    for(int j=lo; j<=hi; ++j){//if randomly choose piv, then init with i=lo,j=lo; j<=hi; ++j. and put ++j if j==piv
+        if(j==piv){
+            ++j;
+            continue;
+        }
+        if(obj[j].x < obj[piv].x){
             Object tmp = obj[i];
             obj[i] = obj[j];
             obj[j] = tmp;
